@@ -6,6 +6,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Fira+Sans+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
       rel="stylesheet"
     />
@@ -13,6 +19,7 @@
     <title>My weather application</title>
   </head>
   <body>
+    <h1>Blanche's Weather App</h1>
     <div class="weather-app">
       <header>
         <form id="search-form">
@@ -25,17 +32,46 @@
           />
           <input type="submit" value="Search" class="search-button" />
         </form>
-      </header> 
+      </header>
       <main>
         <div class="current-weather">
           <div>
             <h1 class="current-city" id="current-city">Paris</h1>
-            <p class="current-details">
-              <span id="current-date"></span>, moderate rain <br />
-              Humidity: <strong>87%</strong>, Wind: <strong>7.2km/h</strong>
-            </p>
+            <div class="current-details">
+              <div class="detail-item">
+                <span class="detail-label">Date:</span>
+                <span class="detail-value" id="current-date"
+                  >April 27, 2025</span
+                >
+              </div>
+              <div class="detail-item">
+                <span class="detail-label">Description:</span>
+                <span class="detail-value" id="weather-description"
+                  >moderate rain</span
+                >
+              </div>
+              <div class="detail-item">
+                <span class="detail-label">Humidity:</span>
+                <span class="detail-value" id="humidity">87%</span>
+              </div>
+              <div class="detail-item">
+                <span class="detail-label">Wind Speed:</span>
+                <span class="detail-value" id="wind-speed">7.2 km/h</span>
+              </div>
+            </div>
+          </div>
+          <div class="current-temperature">
+            <img src="" alt="weather icon" id="weather-icon" />
+            <span class="current-temperature-value" id="current-temperature"
+              >--</span
+            >
+            <span class="current-temperature-unit">°C</span>
+          </div>
+        </div>
+
+        <div class="weather-forecast" id="forecast"></div>
       </main>
-      <footer>
+       <footer>
         <p>
           This project was coded by
           <a href="https://github.com/Blanchedk" target="_blank">Blanche De Klerk</a> and is
@@ -44,6 +80,7 @@
         </p>
       </footer>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="index.js"></script>
   </body>
-  <script src="./index2.js"></script>
 </html>
